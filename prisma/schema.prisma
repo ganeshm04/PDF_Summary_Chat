@@ -1,0 +1,65 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         String  @id @default(uuid())
+  email      String  @unique
+  fullName   String?
+  customerId String?  @unique
+  primeId    String  @unique
+  status     Boolean @default(false)
+  clerkWebhookId String?
+  userId     String   @unique
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  pdfSummary PdfSummaries[]
+  // payment     Payment[] // Commented for later use
+}
+
+model PdfSummaries {
+  id              String  @id @default(uuid())
+  userId          String
+  user            User @relation(fields: [userId], references: [userId])
+  originalFileUrl String
+  summaryText     String
+  status          Boolean @default(false)
+  title           String
+  fileName        String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Payment model commented out for later implementation
+// TODO: Uncomment when implementing payment functionality
+/*
+model Payment {
+  id              String  @id @default(uuid())
+  amount          Int
+  status          Boolean @default(false)
+  razorpayPaymentId String?
+  razorpayOrderId String   @unique
+  plan            String
+  userEmail       String
+  userId          String
+
+  user            User     @relation(fields: [userId], references: [userId])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+*/

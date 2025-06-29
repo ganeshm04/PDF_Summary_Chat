@@ -1,0 +1,22 @@
+# Copy this file to .env and fill in your actual values
+
+# Database
+DATABASE_URL="postgresql://username:password@host:port/database?sslmode=require"
+
+# Clerk Authentication
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+SIGNING_SECRET=your_clerk_signing_secret
+
+# AI APIs
+GOOGLE_GENERATIVE_AI_API_KEY=your_gemini_api_key
+OPENAI_API_KEY=your_openai_api_key
+
+# UploadThing
+UPLOADTHING_SECRET=your_uploadthing_secret
+UPLOADTHING_APP_ID=your_uploadthing_app_id
+
+# Payment (for later use - keep these for when payment is re-enabled)
+NEXT_PUBLIC_TEST_KEY_ID=your_razorpay_test_key_id
+TEST_KEY_SECRET=your_razorpay_test_key_secret
+RAZORPAY_WEBHOOK_SECRET=your_razorpay_webhook_secret 

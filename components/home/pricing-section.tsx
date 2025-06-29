@@ -36,7 +36,7 @@ const plans: Plan[] = [
   {
     id: 'pro',
     name: 'Pro',
-    price: 29.99,
+    price: 0, // Temporarily free
     priceId:
       process.env.NODE_ENV === 'production'
         ? 'price_live_pro'
@@ -64,11 +64,11 @@ export const PricingSection = () => {
           Pricing
         </h2>
         <h2 className="font-bold text-4xl mt-4">
-          Choose the right plan for you
+          All features available for free! 🎉
         </h2>
         <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
           SumChat helps you summarize PDFs quickly and efficiently with
-          AI-powered insights.
+          AI-powered insights. Currently, all features are available at no cost.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto relative">

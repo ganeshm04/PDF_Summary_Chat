@@ -2,11 +2,9 @@
 
 import { CheckCircle, XCircle } from 'lucide-react';
 import { Plan } from './pricing-section';
-// import Link from 'next/link';
+import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { Button } from '../ui/button';
-// import { useState } from 'react';
-// import { redirect } from 'next/navigation';
 
 export const PriceCard = ({ plan }: { plan: Plan }) => {
 //   const [isPending, setIsPending] = useState<boolean>(false);
@@ -78,18 +76,18 @@ export const PriceCard = ({ plan }: { plan: Plan }) => {
           </li>
         ))}
       </ul>
-      <Button
-        // disabled={isPending}
-        // onClick={handlePayment}
-        className={cn(
-          'mt-6 w-full text-center font-semibold py-3 rounded-2xl transition-all',
-          plan.id === 'pro'
-            ? 'bg-gradient-to-r from-rose-700 via-rose-800 to-rose-900 hover:from-rose-800 hover:via-rose-900 hover:to-black text-white'
-            : 'bg-gradient-to-r from-rose-400 via-rose-500 to-rose-600 hover:from-rose-600 hover:via-rose-700 hover:to-rose-800 text-white',
-        )}
-      >
-        Buy Now
-      </Button>
+      <Link href="/upload">
+        <Button
+          className={cn(
+            'mt-6 w-full text-center font-semibold py-3 rounded-2xl transition-all',
+            plan.id === 'pro'
+              ? 'bg-gradient-to-r from-rose-700 via-rose-800 to-rose-900 hover:from-rose-800 hover:via-rose-900 hover:to-black text-white'
+              : 'bg-gradient-to-r from-rose-400 via-rose-500 to-rose-600 hover:from-rose-600 hover:via-rose-700 hover:to-rose-800 text-white',
+          )}
+        >
+          Get Started
+        </Button>
+      </Link>
     </div>
   );
 };
