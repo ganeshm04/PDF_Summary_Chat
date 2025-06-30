@@ -14,7 +14,7 @@ A web application that allows users to upload PDF documents, generate summaries,
 
 - **Frontend:** Next.js (App Router), React, TypeScript, Tailwind CSS
 - **Backend:** Node.js, Prisma ORM, RESTful API routes
-- **Database:** (Configured via Prisma, e.g., PostgreSQL/MySQL/SQLite)
+- **Database:** (Configured via Prisma, PostgreSQL(NeonDB))
 - **Authentication:** Clerk
 - **Payments:** Razorpay
 - **File Uploads:** UploadThing
