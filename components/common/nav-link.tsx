@@ -15,7 +15,7 @@ export default function NavLink({
 }){
     const pathname= usePathname();
     const isActive = pathname === href || (pathname.startsWith(href));
-    return <Link href={href} className={cn("transition-colors text-sm duration-200 text-gray-600 hover:text-rose-500",className,
-        isActive && 'text-rose-500'
+    return <Link href={href} className={cn("transition-colors text-sm duration-200 text-gray-600 hover:text-amber-500",className,
+        isActive && 'text-amber-500'
     )}>{children}</Link>
 }

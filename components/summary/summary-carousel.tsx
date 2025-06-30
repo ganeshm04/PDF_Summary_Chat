@@ -30,14 +30,14 @@ export const SummaryCarousel: React.FC<SummaryCarouselProps> = ({ slides }) => {
           <span
             key={idx}
             className={`h-1 w-8 mx-0.5 rounded-full transition-all duration-300 ${
-              idx === current ? "bg-rose-500" : "bg-rose-200"
+              idx === current ? "bg-amber-500" : "bg-amber-200"
             }`}
           />
         ))}
       </div>
 
       {/* Card */}
-      <div className="bg-white/80 rounded-3xl shadow-lg border border-rose-100 px-6 py-8 w-full min-h-[340px] flex flex-col items-center transition-all duration-300">
+      <div className="bg-white/80 rounded-3xl shadow-lg border border-amber-100 px-6 py-8 w-full min-h-[340px] flex flex-col items-center transition-all duration-300">
         <h2 className="text-2xl font-bold mb-6 text-gray-900">{slide.step}</h2>
         <div className="flex flex-col gap-4 w-full">
           {slide.keyPoints.map((kp, i) => (
@@ -57,14 +57,14 @@ export const SummaryCarousel: React.FC<SummaryCarouselProps> = ({ slides }) => {
         <button
           aria-label="Previous"
           onClick={goPrev}
-          className="bg-rose-100 hover:bg-rose-200 text-rose-600 rounded-full p-3 shadow transition"
+          className="bg-amber-100 hover:bg-amber-200 text-amber-600 rounded-full p-3 shadow transition"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button
           aria-label="Next"
           onClick={goNext}
-          className="bg-rose-100 hover:bg-rose-200 text-rose-600 rounded-full p-3 shadow transition"
+          className="bg-amber-100 hover:bg-amber-200 text-amber-600 rounded-full p-3 shadow transition"
         >
           <ChevronRight className="w-6 h-6" />
         </button>

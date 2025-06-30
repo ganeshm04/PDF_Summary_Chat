@@ -79,7 +79,7 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 350 89% 60%;
+    --primary: 39 90% 50%;
     --primary-foreground: 210 40% 98%;
     --secondary: 350 33% 96%;
     --secondary-foreground: 350 89% 60%;
@@ -149,7 +149,7 @@
   }
 
   button {
-    @apply hover:cursor-pointer bg-rose-600 hover:bg-rose-700;
+    @apply hover:cursor-pointer bg-amber-600 hover:bg-amber-700;
   }
 
   @keyframes gradient-x {

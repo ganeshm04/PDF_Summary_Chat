@@ -4,9 +4,9 @@ import { Button } from '../ui/button';
 
 export const CTASection = () => {
   return (
-    <section className="py-16 px-6 bg-rose-50 text-gray-900 text-center">
+    <section className="py-16 px-6 bg-amber-50 text-gray-900 text-center">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold text-rose-700">
+        <h2 className="text-4xl font-bold text-amber-700">
           Start Summarizing PDFs Instantly
         </h2>
         <p className="mt-4 text-gray-600 text-lg">
@@ -16,7 +16,7 @@ export const CTASection = () => {
         <Button
           variant={'link'}
           size={'lg'}
-          className="mt-6  bg-linear-to-r from-slate-900 to-rose-500 hover:from-rose-500 hover:to-slate-900 text-white font-semibold py-3 px-8 transition-all duration-300"
+          className="mt-6  bg-linear-to-r from-slate-900 to-amber-500 hover:from-amber-500 hover:to-slate-900 text-white font-semibold py-3 px-8 transition-all duration-300"
         >
           <Link
             href={'/#pricing'}

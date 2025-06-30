@@ -48,10 +48,10 @@ export const PriceCard = ({ plan }: { plan: Plan }) => {
     <div
       className={cn(
         'p-8 rounded-2xl shadow-lg bg-white hover:scale-105 transition-all border',
-        plan.id === 'pro' ? 'border-2 border-rose-900' : 'border-gray-200',
+        plan.id === 'pro' ? 'border-2 border-amber-900' : 'border-gray-200',
       )}
     >
-      <h3 className="text-2xl font-semibold text-rose-600">{plan.name}</h3>
+      <h3 className="text-2xl font-semibold text-amber-600">{plan.name}</h3>
       <p className="text-gray-500 mt-2">
         {plan.name === 'Basic'
           ? 'For occasional users'
@@ -81,8 +81,8 @@ export const PriceCard = ({ plan }: { plan: Plan }) => {
           className={cn(
             'mt-6 w-full text-center font-semibold py-3 rounded-2xl transition-all',
             plan.id === 'pro'
-              ? 'bg-gradient-to-r from-rose-700 via-rose-800 to-rose-900 hover:from-rose-800 hover:via-rose-900 hover:to-black text-white'
-              : 'bg-gradient-to-r from-rose-400 via-rose-500 to-rose-600 hover:from-rose-600 hover:via-rose-700 hover:to-rose-800 text-white',
+              ? 'bg-gradient-to-r from-amber-700 via-amber-800 to-amber-900 hover:from-amber-800 hover:via-amber-900 hover:to-black text-white'
+              : 'bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-600 hover:via-amber-700 hover:to-amber-800 text-white',
           )}
         >
           Get Started

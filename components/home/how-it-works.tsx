@@ -28,7 +28,7 @@ export const HowItWorks = () => {
     <section>
       <div className="how_it_works flex flex-col items-center px-6 py-10">
         <div className="how_it_works_heading_section text-center">
-          <h3 className="text-rose-600 text-base font-semibold uppercase">
+          <h3 className="text-amber-600 text-base font-semibold uppercase">
             How It Works
           </h3>
           <h2 className="font-bold text-3xl max-w-2xl mx-auto mt-10">

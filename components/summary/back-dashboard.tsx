@@ -8,7 +8,7 @@ export const BackToDashboard = () => {
       <Link href="/dashboard">
         <Button
           size="lg"
-          className="group flex items-center gap-2 bg-gradient-to-r from-rose-500 to-rose-600 text-white shadow-lg hover:from-rose-600 hover:to-rose-700 transition-colors duration-300 rounded-full px-6 py-4"
+          className="group flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-lg hover:from-amber-600 hover:to-amber-700 transition-colors duration-300 rounded-full px-6 py-4"
         >
           <ArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
           <span className="text-base font-semibold tracking-wide">

@@ -48,14 +48,14 @@ export default function PostLoginPage() {
   }, [user, router]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white via-rose-50 to-rose-100">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white via-amber-50 to-amber-100">
       <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className="flex flex-col items-center space-y-4"
       >
-        <Loader2 className={cn('animate-spin text-rose-500', 'w-10 h-10')} />
+        <Loader2 className={cn('animate-spin text-amber-500', 'w-10 h-10')} />
         <p className="text-lg font-medium text-gray-700">Logging you in...</p>
         <span className="text-sm text-gray-500">
           Preparing your dashboard 🌸

@@ -91,17 +91,17 @@ const SummaryDetails = async ({ params }: SummaryParams) => {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-50/50 via-white to-rose-50/50">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50/50 via-white to-amber-50/50">
       <section className="max-w-7xl mx-auto px-6 py-10 space-y-8">
         <BackToDashboard />
 
         {/* Header Card */}
-        <Card className="border-2 border-rose-200 bg-gradient-to-br from-rose-50 to-rose-100">
+        <Card className="border-2 border-amber-200 bg-gradient-to-br from-amber-50 to-amber-100">
           <CardHeader>
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               <div className="space-y-2">
                 <CardTitle className="text-3xl font-bold text-gray-800 flex items-center gap-3">
-                  <FileText className="h-8 w-8 text-rose-600" />
+                  <FileText className="h-8 w-8 text-amber-600" />
                   {summary.title}
                 </CardTitle>
                 <div className="flex flex-wrap gap-2 items-center text-sm text-gray-600">
@@ -124,7 +124,7 @@ const SummaryDetails = async ({ params }: SummaryParams) => {
                   href={summary.originalFileUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-lg transition-colors shadow-sm"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition-colors shadow-sm"
                 >
                   <ExternalLink className="h-4 w-4" />
                   View Original PDF

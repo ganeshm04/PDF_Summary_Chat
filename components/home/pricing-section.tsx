@@ -60,7 +60,7 @@ export const PricingSection = () => {
   return (
     <section className="py-16 px-6 bg-white text-gray-900">
       <div className="text-center mb-12">
-        <h2 className="text-rose-600 font-semibold uppercase">
+        <h2 className="text-amber-600 font-semibold uppercase">
           Pricing
         </h2>
         <h2 className="font-bold text-4xl mt-4">
