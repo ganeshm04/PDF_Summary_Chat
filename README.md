@@ -32,7 +32,7 @@ A web application that allows users to upload PDF documents, generate summaries,
 1. Clone the repository:
     ```bash
     git clone https://github.com/yourusername/pdf_sum_chat.git
-    cd pdf_sum_chat/client
+    cd pdf_sum_chat
     ```
 2. Install dependencies:
     ```bash
@@ -74,7 +74,7 @@ server/               # Backend worker/server scripts
 
 - **Note:** Chat feature is not integrated because it requires OpenAI API credits. The code related to chat feature is in "./server" folder which runs in local computer with docker.
 
-- **Note:** The razor payment is integrated but code is commmented, To use, uncommment 
+- **Note:** The razor payment is integrated but code is commented, To use, uncomment 
 
 
 
