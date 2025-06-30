@@ -50,18 +50,3 @@ The schema includes:
 - **User**: Stores user information from Clerk authentication
 - **PdfUpload**: Stores PDF uploads with their summaries and status
 
-## 5. Usage
-
-The updated `action/upload-actions.ts` now:
-- Creates/retrieves user records from Clerk authentication
-- Stores PDF uploads in the database
-- Updates upload status (PROCESSING → COMPLETED/FAILED)
-- Associates summaries with upload records
-
-## 6. Additional Features
-
-You can now:
-- Track upload history per user
-- Store and retrieve summaries
-- Monitor upload status
-- Build features like upload history, summary management, etc. 

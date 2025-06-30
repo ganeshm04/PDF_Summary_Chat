@@ -16,7 +16,7 @@ OPENAI_API_KEY=your_openai_api_key
 UPLOADTHING_SECRET=your_uploadthing_secret
 UPLOADTHING_APP_ID=your_uploadthing_app_id
 
-# Payment (for later use - keep these for when payment is re-enabled)
+# Payment (for later use -  when payment is re-enabled)
 NEXT_PUBLIC_TEST_KEY_ID=your_razorpay_test_key_id
 TEST_KEY_SECRET=your_razorpay_test_key_secret
 RAZORPAY_WEBHOOK_SECRET=your_razorpay_webhook_secret 
