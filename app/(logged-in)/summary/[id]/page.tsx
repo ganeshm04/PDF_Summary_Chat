@@ -5,13 +5,12 @@ interface SummaryParams {
 }
 
 import { DeleteButton } from '@/components/dashboard/delete-button';
-import { SummaryStatusWrapper } from '@/components/summary/summary-status-wrapper';
 import { SummaryCarousel } from '@/components/summary/summary-carousel';
-import { Download, FileText, Calendar, ExternalLink } from 'lucide-react';
+import { FileText, Calendar, ExternalLink } from 'lucide-react';
 import { redirect } from 'next/navigation';
 import { BackToDashboard } from '@/components/summary/back-dashboard';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card,CardHeader, CardTitle } from '@/components/ui/card';
 
 // Helper to parse summaryText into slides for the carousel
 function parseSummaryToSlides(summaryText: string) {
@@ -52,7 +51,7 @@ function parseSummaryToSlides(summaryText: string) {
     };
   }).filter(slide => slide.keyPoints.length > 0);
 
-  
+
   if (slides.length === 0) {
     return [
       {
@@ -88,14 +87,14 @@ const SummaryDetails = async ({ params }: SummaryParams) => {
   }
 
   const slides = parseSummaryToSlides(summary.summaryText);
-  
-  
+
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-rose-50/50 via-white to-rose-50/50">
       <section className="max-w-7xl mx-auto px-6 py-10 space-y-8">
         <BackToDashboard />
-        
+
         {/* Header Card */}
         <Card className="border-2 border-rose-200 bg-gradient-to-br from-rose-50 to-rose-100">
           <CardHeader>
@@ -121,14 +120,16 @@ const SummaryDetails = async ({ params }: SummaryParams) => {
               </div>
 
               <div className="flex items-center gap-3">
-                <SummaryStatusWrapper
-                  initialStatus={summary.status}
-                  summaryId={summary.id}
-                />
+                <a
+                  href={summary.originalFileUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-lg transition-colors shadow-sm"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  View Original PDF
+                </a>
                 <DeleteButton summaryId={summary?.id} />
-                <button className="p-2 rounded-lg bg-white/80 hover:bg-white transition-colors shadow-sm">
-                  <Download className="h-5 w-5 text-gray-600" />
-                </button>
               </div>
             </div>
           </CardHeader>
@@ -144,32 +145,9 @@ const SummaryDetails = async ({ params }: SummaryParams) => {
               We have analyzed your PDF and broken it down into key sections for easier understanding
             </p>
           </div>
-          
+
           <SummaryCarousel slides={slides} />
         </div>
-
-        {/* Original PDF Link */}
-        <Card className="border-2 border-rose-200 bg-gradient-to-br from-rose-50 to-rose-100">
-          <CardContent className="pt-6">
-            <div className="flex items-center justify-between">
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-1">Original Document</h3>
-                <p className="text-sm text-gray-600">
-                  View the original PDF file that was analyzed
-                </p>
-              </div>
-              <a
-                href={summary.originalFileUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-lg transition-colors shadow-sm"
-              >
-                <ExternalLink className="h-4 w-4" />
-                View Original PDF
-              </a>
-            </div>
-          </CardContent>
-        </Card>
       </section>
     </div>
   );
